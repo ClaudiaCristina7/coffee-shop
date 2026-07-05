@@ -1,9 +1,9 @@
 # Roast & Co. — Coffee Shop (React + Vite + TypeScript)
 
-Proiect demo de vânzare cafea, produse vending și aparate, cu:
-- Meniu cu dropdown la hover (Cafea / Produse Vending / Aparate), fiecare cu 20 de produse
-- Pagină de comandă (`/order`) cu butoane de schimbare a categoriei
-- Carduri de produs (`CarduriCafea.tsx`) cu selecție gramaj (250g/500g/1kg), câmp de cantitate și validare la Add to Cart
+"A coffee e-commerce platform built with React + Vite + TypeScript on the frontend, featuring a modern dark-themed UI with a fully functional shopping cart, product catalog, and order management system. The backend is powered by Node.js + Express, connected to a PostgreSQL database for storing products, orders, and customer data. 
+Each registered user receives a unique security key for authenticated access, ensuring secure session management and data protection. API endpoints were tested and validated using Postman throughout development. 
+The platform supports user registration, login, and a complete checkout flow."
+
 
 ## Instalare
 
