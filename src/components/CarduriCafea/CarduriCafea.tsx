@@ -1,30 +1,33 @@
-import { useState } from 'react';
-import type { Product, Weight } from '../../types/product';
-import { WEIGHT_OPTIONS } from '../../types/product';
-import { useCart } from '../../context/CartContext';
-import './CarduriCafea.css';
+import { useState } from "react";
+import type { Product, Weight } from "../../types/product";
+import { WEIGHT_OPTIONS } from "../../types/product";
+import { useCart } from "../../context/CartContext";
+import "./CarduriCafea.css";
 
 interface CarduriCafeaProps {
   product: Product;
   highlighted?: boolean;
 }
 
-export default function CarduriCafea({ product, highlighted }: CarduriCafeaProps) {
-  const [selectedWeight, setSelectedWeight] = useState<Weight | ''>('');
-  const [quantity, setQuantity] = useState('');
-  const [error, setError] = useState('');
+export default function CarduriCafea({
+  product,
+  highlighted,
+}: CarduriCafeaProps) {
+  const [selectedWeight, setSelectedWeight] = useState<Weight | "">("");
+  const [quantity, setQuantity] = useState("");
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const { addToCart } = useCart();
 
   const handleWeightChange = (value: string) => {
     setSelectedWeight(value as Weight);
-    setError('');
+    setError("");
     setSuccess(false);
   };
 
   const handleQuantityChange = (value: string) => {
     setQuantity(value);
-    setError('');
+    setError("");
     setSuccess(false);
   };
 
@@ -32,25 +35,30 @@ export default function CarduriCafea({ product, highlighted }: CarduriCafeaProps
     setSuccess(false);
 
     if (!selectedWeight) {
-      setError('Trebuie să selectezi gramajul.');
+      setError("Trebuie să selectezi gramajul.");
       return;
     }
 
     const parsedQuantity = Number(quantity);
     if (!quantity || Number.isNaN(parsedQuantity) || parsedQuantity <= 0) {
-      setError('Trebuie să selectezi o cantitate.');
+      setError("Trebuie să selectezi o cantitate.");
       return;
     }
 
-    addToCart(product.id, product.name, selectedWeight, parsedQuantity, product.price);
-    setError('');
-    setSuccess(true);
-    setQuantity('');
-    setSelectedWeight('');
+    addToCart(
+      product.id,
+      product.name,
+      selectedWeight,
+      parsedQuantity,
+      product.price,
+      product.emoji,
+    );
   };
 
   return (
-    <article className={`coffee-card${highlighted ? ' coffee-card--highlighted' : ''}`}>
+    <article
+      className={`coffee-card${highlighted ? " coffee-card--highlighted" : ""}`}
+    >
       <div className="coffee-card__image" aria-hidden="true">
         {product.emoji}
       </div>
@@ -78,7 +86,10 @@ export default function CarduriCafea({ product, highlighted }: CarduriCafeaProps
 
       {selectedWeight && (
         <>
-          <label className="coffee-card__label" htmlFor={`quantity-${product.id}`}>
+          <label
+            className="coffee-card__label"
+            htmlFor={`quantity-${product.id}`}
+          >
             Cantitate comandată
           </label>
           <input
@@ -96,7 +107,11 @@ export default function CarduriCafea({ product, highlighted }: CarduriCafeaProps
       {error && <p className="coffee-card__error">{error}</p>}
       {success && <p className="coffee-card__success">Adăugat în coș!</p>}
 
-      <button type="button" className="coffee-card__add-btn" onClick={handleAddToCart}>
+      <button
+        type="button"
+        className="coffee-card__add-btn"
+        onClick={handleAddToCart}
+      >
         ADD TO CART
       </button>
     </article>

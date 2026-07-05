@@ -1,4 +1,4 @@
-export type Category = 'cafea' | 'vending' | 'aparate';
+export type Category = "cafea" | "vending" | "aparate";
 
 export interface Product {
   id: string;
@@ -10,14 +10,14 @@ export interface Product {
 }
 
 export const CATEGORY_LABELS: Record<Category, string> = {
-  cafea: 'Cafea',
-  vending: 'Produse Vending',
-  aparate: 'Aparate',
+  cafea: "Cafea",
+  vending: "Produse Vending",
+  aparate: "Aparate",
 };
 
-export type Weight = '250g' | '500g' | '1kg';
+export type Weight = "250g" | "500g" | "1kg";
 
-export const WEIGHT_OPTIONS: Weight[] = ['250g', '500g', '1kg'];
+export const WEIGHT_OPTIONS: Weight[] = ["250g", "500g", "1kg"];
 
 export interface CartItem {
   productId: string;
@@ -25,4 +25,5 @@ export interface CartItem {
   weight: Weight;
   quantity: number;
   unitPrice: number;
+  emoji: string;
 }

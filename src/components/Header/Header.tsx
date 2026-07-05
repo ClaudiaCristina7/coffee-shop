@@ -5,7 +5,7 @@ import "./Header.css";
 
 export default function Header() {
   const navigate = useNavigate();
-  const { totalItems } = useCart();
+  const { items, openCartModal } = useCart();
 
   return (
     <header className="header">
@@ -37,22 +37,23 @@ export default function Header() {
         <div className="header__actions">
           <button
             type="button"
-            className="header__cart"
-            onClick={() => navigate("/order")}
-            aria-label="Coș de cumpărături"
-          >
-            🛒 <span>{totalItems}</span>
-          </button>
-          <button
-            type="button"
             className="header__contact-btn"
             onClick={() => navigate("/contact")}
           >
             Contact us
           </button>
-          <span className="header__avatar" aria-hidden="true">
+
+          <button
+            type="button"
+            className="header__avatar-btn"
+            onClick={openCartModal}
+            aria-label="Coș de cumpărături"
+          >
             <img src={logoIcon} alt="" className="header__avatar-img" />
-          </span>
+            {items.length > 0 && (
+              <span className="header__avatar-badge">{items.length}</span>
+            )}
+          </button>
         </div>
       </div>
     </header>

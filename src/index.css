@@ -1,14 +1,14 @@
 :root {
-  --color-bg: #4d3e2c;
+  --color-bg: #b8b5b2;
   --color-bg-darker: #170f0a;
   --color-bg-alt: #3a2e20;
   --color-surface: #5a4a35;
   --color-surface-hover: #6a5843;
-  --color-border: #8c7251;
+  --color-border: #8c72513c;
   --color-text: #f5f5f5;
   --color-text-muted: #e4e1dc;
   --color-accent: #a2845e;
-  --color-accent-hover: #e0a65c;
+  --color-accent-hover: #57452c;
   --color-accent-2: #8a9a5b;
   --color-danger: #e0596b;
 
@@ -31,6 +31,7 @@
   --radius-lg: 20px;
 
   --header-height: 78px;
+  --checkout-card-height: 520px;
 
   color-scheme: dark;
 }

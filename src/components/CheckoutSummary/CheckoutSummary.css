@@ -1,0 +1,141 @@
+.checkout-summary {
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.checkout-summary__title {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 1.2rem;
+}
+
+.checkout-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+}
+
+.checkout-summary__free {
+  color: #2e7d32;
+}
+
+.checkout-summary__hint {
+  color: #555555;
+  font-size: 0.8rem;
+  margin: 0.2rem 0 0.8rem;
+}
+
+.checkout-summary__promo {
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 1rem 0;
+  margin: 0.6rem 0;
+}
+
+.checkout-summary__label {
+  display: block;
+  font-size: 0.78rem;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.checkout-summary__promo-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.checkout-summary__promo-input {
+  flex: 1;
+  min-width: 0;
+  background: #f7f7f7;
+  border: 1px solid #d8d8d8;
+  color: #1a1a1a;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.checkout-summary__promo-input:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.checkout-summary__promo-btn {
+  background: #f2f2f2;
+  border: 1px solid #d8d8d8;
+  color: #1a1a1a;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.checkout-summary__promo-btn:hover {
+  border-color: var(--color-accent);
+}
+
+.checkout-summary__promo-message {
+  color: #555555;
+  font-size: 0.8rem;
+  margin: 0.6rem 0 0;
+}
+
+.checkout-summary__row--total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding-top: 0.8rem;
+}
+
+.checkout-summary__place-order {
+  width: 100%;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.checkout-summary__place-order:hover {
+  background: var(--color-accent-hover);
+}
+
+.checkout-summary__contact {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.checkout-summary__contact-label {
+  color: #555555;
+  font-size: 0.82rem;
+  margin: 0 0 0.5rem;
+}
+
+.checkout-summary__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.checkout-summary__whatsapp:hover {
+  text-decoration: underline;
+}
+@media (max-width: 860px) {
+  .checkout-items {
+    height: auto;
+    max-height: var(--checkout-card-height);
+  }
+}

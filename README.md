@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Roast & Co. — Coffee Shop (React + Vite + TypeScript)
 
 Proiect demo de vânzare cafea, produse vending și aparate, cu:
@@ -24,3 +25,6 @@ src/
   context/      CartContext (starea coșului de cumpărături)
   types/        tipuri TypeScript comune
 ```
+=======
+# coffee-shop
+>>>>>>> 74275b2408825a1b9d6169df91386cf303933691
