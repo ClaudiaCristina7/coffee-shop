@@ -1,0 +1,4 @@
+.about-page {
+  flex: 1;
+  background: var(--color-bg-darker);
+}

@@ -1,0 +1,119 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: rgba(77, 62, 44, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.header__logo {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8c7251;
+  white-space: nowrap;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.header__nav-list a {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  padding: 0.5rem 0.25rem;
+}
+
+.header__nav-list a:hover {
+  color: var(--color-accent-hover);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.header__cart {
+  background: transparent;
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.header__cart:hover {
+  background: var(--color-surface-hover);
+}
+
+.header__contact-btn {
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  min-width: 75px;
+  height: 40px;
+  padding: 0 0.7rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.header__contact-btn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.header__avatar {
+  width: 37px;
+  height: 35px;
+  border-radius: 40%;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .header__nav-list {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .header__nav {
+    display: none;
+  }
+}

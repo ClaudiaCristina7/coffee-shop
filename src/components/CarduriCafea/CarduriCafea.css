@@ -1,0 +1,103 @@
+.coffee-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.coffee-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+}
+
+.coffee-card--highlighted {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.coffee-card__image {
+  font-size: 2.6rem;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.coffee-card__title {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.coffee-card__description {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  margin: 0 0 0.8rem;
+  min-height: 2.6em;
+}
+
+.coffee-card__price {
+  color: var(--color-accent-hover);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+
+.coffee-card__label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3rem;
+}
+
+.coffee-card__select,
+.coffee-card__input {
+  width: 100%;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.9rem;
+  font-size: 0.9rem;
+}
+
+.coffee-card__select:focus,
+.coffee-card__input:focus {
+  border-color: var(--color-accent);
+}
+
+.coffee-card__error {
+  color: var(--color-danger);
+  font-size: 0.82rem;
+  margin: -0.3rem 0 0.7rem;
+}
+
+.coffee-card__success {
+  color: var(--color-accent-2);
+  font-size: 0.82rem;
+  margin: -0.3rem 0 0.7rem;
+}
+
+.coffee-card__add-btn {
+  margin-top: auto;
+  background: var(--color-accent);
+  color: #1b120d;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.coffee-card__add-btn:hover {
+  background: var(--color-accent-hover);
+}
